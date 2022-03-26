@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class changeScenes : MonoBehaviour
+public class gameDescriptionScene : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -12,20 +12,17 @@ public class changeScenes : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
-    public void startScene() {
-        SceneManager.LoadScene("GameDescription");
+    public void startGame() {
+        SceneManager.LoadScene("GamePreparation");
     }
 
     public void mainMenuScene() {
         SceneManager.LoadScene("MainMenu");
-    }
-
-    public void QuitGame() {
-        Application.Quit();
     }
 }
