@@ -16,6 +16,9 @@ public class gamePreparationScene : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) {
             SceneManager.LoadScene("GameDescription");
         }
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            SceneManager.LoadScene("Gameplay");
+        }
     }
 
     public void startGame() {
